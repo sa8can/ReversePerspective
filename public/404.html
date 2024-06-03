@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./images/icon256x256.png" />
+    <link rel="icon" href="./images/favicon.svg" />
+    <title>Reverse Perspective</title>
+    <meta name="description" content="A study of how it looks in reverse perspective." />
+    <link rel="stylesheet" href="./styles/app.css" />
+  </head>
+  <style>
+    #message-wrapper {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+
+      width: 100dvw;
+      height: 100dvh;
+
+      margin: 24px;
+    }
+
+    #error-message {
+      display: flex;
+      flex-direction: column;
+
+      margin-top: 1dvh;
+    }
+
+    #error-code {
+      font-size: 12rem;
+      font-weight: 400;
+    }
+
+    #message-text {
+      margin-top: -24px;
+      
+      font-size: 2rem;
+      font-weight: 200;
+    }
+  </style>
+  <body>
+    <div id="message-wrapper">
+      <div id="error-message">
+        <h2 id="error-code">404</h2>
+        <h1 id="message-text">Page Not Found</h1>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./images/icon256x256.png" />
+    <link rel="icon" href="./images/favicon.svg" />
+    <title>Reverse Perspective</title>
+    <meta name="description" content="A study of how it looks in reverse perspective." />
+    <link rel="stylesheet" href="./styles/app.css" />
+  </head>
+  <body>
+    <div class="loading-wrapper" id="loading-wrapper">
+      <div class="loading-inner">
+        <div class="loading-bar-upper">
+          <div class="loading-logo-wrapper">
+            <p class="loading-logo" id="loading-logo1">Reverse</p>
+            <p class="loading-logo" id="loading-logo2">Perspective</p>
+          </div>
+          <p class="loading-progress" id="loading-progress">0</p>
+        </div>
+        <div class="loading-bar-line" id="loading-bar-line">
+          <div class="loading-bar-fill" id="loading-bar-fill"></div>
+        </div>
+        <div class="loading-bar-lower">
+          <p class="loading-info" id="loading-info">Load:</p>
+          <p class="copy-rights">&copy; 2024 Ryuku Sugawara</p>
+        </div>
+      </div>
+    </div>
+    <div class="ui-wrapper">
+      <div class="button-container">
+        <button class="obj-control-button obj-control-prev" id="button-prev" type="button">
+          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 48">
+            <polygon points="30 0 24 0 0 24 24 48 30 48 6 24 30 0" />
+          </svg>
+        </button>
+        <button class="obj-control-button obj-control-next" id="button-next" type="button">
+          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 48">
+            <polygon points="0 0 6 0 30 24 6 48 0 48 24 24 0 0" />
+          </svg>
+        </button>
+      </div>
+      <div class="ui-bottom">
+        <div class="info-container" id="info">
+          <div class="object-name-container">
+            <h1 class="object-name" id="object-name"></h1>
+            <div class="object-name-cover"></div>
+          </div>
+          <h2 class="object-number" id="object-number"></h2>
+        </div>
+        <div class="slider-container">
+          <div class="slider-wrapper">
+            <p class="slider-number" id="slider-number">0</p>
+            <input class="perspective-slider" id="slider" type="range" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="canvas-wrapper">
+      <canvas class="canvas" id="webgl-canvas"></canvas>
+    </div>
+    <script src="./script/app.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js');
+        });
+      }
+    </script>
+  </body>
+</html>
