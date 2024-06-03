@@ -6,10 +6,7 @@ firebase.json
 datebase.rules.json
 
 # models
-backpack.glb
-human.glb
-mejiro.glb
-sneaker.glb
+/public/models
 
 # Logs
 logs
