@@ -52,7 +52,8 @@ class PointerManager {
   }
 
   private static onPointerDown(event: PointerEvent) {
-    if (this.pointerCount < this.MAX_POINTER_COUNT) this.pointerCache.push(event);
+    const isOverPointerCount =this.pointerCount < this.MAX_POINTER_COUNT;
+    if (isOverPointerCount) this.pointerCache.push(event);
 
     this.onPointerDownEvents.forEach((callBack) => callBack(event));
   }
