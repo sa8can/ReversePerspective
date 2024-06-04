@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import Updatable from '../updatable/updatable';
 import { Pointer } from '../user-input/pointer-manager';
 
-export default class RotateController extends Updatable {
+export default class RotationController extends Updatable {
   public readonly target: THREE.Object3D;
 
   private readonly WORLD_AXIS_X = new THREE.Vector3(1, 0, 0);

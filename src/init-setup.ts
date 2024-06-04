@@ -5,7 +5,7 @@ import ModelData from '../json/model-list.json';
 import LoadingScreen from './ui/loading-screen';
 import ObjController from './feature/object-controller';
 import UpdateCaller from './updatable/update-caller';
-import RotateController from './feature/rotation-controller';
+import RotationController from './feature/rotation-controller';
 import ScaleController from './feature/scale-controller';
 import PerspectiveSlider from './ui/perspective-slider';
 import AnimationController from './feature/animation-controller';
@@ -105,7 +105,7 @@ export default class Setup {
       modelList,
     );
 
-    new RotateController(objectParent);
+    new RotationController(objectParent);
     new ScaleController(objectParent);
     new AutoRotate(objectParent);
     new AutoPlay(this.perspectiveSlider, objController);
