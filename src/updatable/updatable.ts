@@ -9,7 +9,6 @@ export default abstract class Updatable {
     if (!UpdateCaller.isStartUpdate) UpdateCaller.startUpdate();
   }
 
-  //Updatableを継承しているのに継承先にupdate関数が存在しない場合、エラーを返す
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   public update(deltaTime?: number) {
     if (this.isThrewError) return;
